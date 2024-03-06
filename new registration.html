@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registration Page</title>
+</head>
+<style>
+    /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.home-bg {
+    /* background-image:  url(`images/bg.jpg`); */
+    background-image: url(./bg.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<body>
+  <div class="home-bg" id="home">
+    <div class="home-content">
+  <div class="register-container">
+    <h1> Registration </h1>
+    Username: <input id="uname"><br>
+    <br>
+    Password: <input id="pass" type="password"><br>
+    <button type="submit" onclick="fun()">Submit</button>
+    <p id="demo"></p>
+    <a href="login.html">Login</a>
+    <script>
+        function fun(){
+        let uname = document.getElementById('uname').value;
+        let pass = document.getElementById('pass').value;
+        // Save the name in localStorage.
+        localStorage.setItem('name', uname);
+        localStorage.setItem('password', pass);
+        document.getElementById("demo").innerHTML= ("Successful")}
+    </script>
+
+     alredy have an account
+  </script>
+</body>
+</html>
